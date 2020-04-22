@@ -9,13 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
+	var url = Bundle.main.url(forResource: "firstVideo", withExtension: "MOV")!
+
+	var body: some View {
+		VideoView(url: url)
+			.onTapGesture {
+				print("Tapped!")
+			}
+			.onTapGesture(count: 2) {
+				print("Double tapped!")
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+	static var previews: some View {
+		ContentView()
+			.cornerRadius(25)
+			.padding()
     }
 }
