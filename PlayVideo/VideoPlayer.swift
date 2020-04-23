@@ -15,8 +15,10 @@ class VideoPlayer: UIView {
     private let playerLayer = AVPlayerLayer()
 	var player: AVPlayer!
 
-    init(frame: CGRect, url: URL) {
+    init(frame: CGRect, videoName: String) {
         super.init(frame: frame)
+		let url = Bundle.main.url(forResource: videoName, withExtension: "MOV")!
+
         player = AVPlayer(url: url)
         player.play()
         
@@ -50,10 +52,6 @@ class VideoPlayer: UIView {
         super.layoutSubviews()
         playerLayer.frame = bounds
     }
-
-	func SetBackgroundColor()
-	{
-	}
 
 	@objc func didTap(_ notification:Notification) {
 		if self.player.timeControlStatus == .playing

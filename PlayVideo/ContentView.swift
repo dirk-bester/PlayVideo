@@ -9,16 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
-	var url = Bundle.main.url(forResource: "firstVideo", withExtension: "MOV")!
-
 	var body: some View {
-		VideoView(url: url)
-			.onTapGesture(count: 2) {
-				NotificationCenter.default.post(name: .didDoubleTap, object: nil)
+		VStack {
+			ActivityIndicator()
+			VideoView(videoName: "firstVideo")
+				.onTapGesture(count: 2) {
+					NotificationCenter.default.post(name: .didDoubleTap, object: nil)
 			}
 			.onTapGesture {
 				NotificationCenter.default.post(name: .didTap, object: nil)
 			}
+		}
 	}
 }
 
@@ -27,5 +28,5 @@ struct ContentView_Previews: PreviewProvider {
 		ContentView()
 			.cornerRadius(25)
 			.padding()
-    }
+	}
 }

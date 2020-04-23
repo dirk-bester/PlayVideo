@@ -11,27 +11,20 @@ import AVFoundation
 import AVKit
 
 struct VideoView: UIViewRepresentable {
-    var url:URL
+    var videoName: String
     
     func makeUIView(context: Context) -> UIView {
-        return VideoPlayer(frame: .zero, url: url)
+        return VideoPlayer(frame: .zero, videoName: videoName)
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
     }
-
-	func onTapGesture() {
-print("Hey")
-	}
-
 }
 
 
 struct VideoView_Previews: PreviewProvider {
-	static let url = Bundle.main.url(forResource: "firstVideo", withExtension: "MOV")!
-
 	static var previews: some View {
-		return VideoView(url: url)
+		return VideoView(videoName: "firstVideo")
 		.padding()
 	}
 }

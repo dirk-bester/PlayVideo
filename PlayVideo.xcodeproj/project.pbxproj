@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61949979245173C700C57734 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61949978245173C600C57734 /* ActivityIndicator.swift */; };
 		61F66A4E2450201000667B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F66A4D2450201000667B94 /* AppDelegate.swift */; };
 		61F66A502450201000667B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F66A4F2450201000667B94 /* SceneDelegate.swift */; };
 		61F66A522450201000667B94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F66A512450201000667B94 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61949978245173C600C57734 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		61F66A4A2450201000667B94 /* PlayVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F66A4D2450201000667B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F66A4F2450201000667B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				61F66A5B2450201100667B94 /* Info.plist */,
 				61F66A612450203800667B94 /* VideoPlayer.swift */,
 				61F66A632450205300667B94 /* VideoView.swift */,
+				61949978245173C600C57734 /* ActivityIndicator.swift */,
 				61F66A652450219500667B94 /* Resources */,
 				61F66A552450201100667B94 /* Preview Content */,
 			);
@@ -168,6 +171,7 @@
 				61F66A642450205300667B94 /* VideoView.swift in Sources */,
 				61F66A502450201000667B94 /* SceneDelegate.swift in Sources */,
 				61F66A522450201000667B94 /* ContentView.swift in Sources */,
+				61949979245173C700C57734 /* ActivityIndicator.swift in Sources */,
 				61F66A622450203800667B94 /* VideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
