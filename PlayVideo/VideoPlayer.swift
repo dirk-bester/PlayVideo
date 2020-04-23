@@ -28,9 +28,19 @@ class VideoPlayer: UIView {
 			self?.player?.play()
 		}
 
+		NotificationCenter.default.addObserver(self, selector: #selector(didTap),
+											   name: .didTap, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(didDoubleTap),
+											   name: .didDoubleTap, object: nil)
+
 //		playerLayer.backgroundColor = UIColor.black.cgColor	// Uncomment to see bounds
         layer.addSublayer(playerLayer)
     }
+
+	deinit {
+		NotificationCenter.default.removeObserver(self, name: .didTap, object: nil)
+		NotificationCenter.default.removeObserver(self, name: .didDoubleTap, object: nil)
+	}
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -44,5 +54,25 @@ class VideoPlayer: UIView {
 	func SetBackgroundColor()
 	{
 	}
+
+	@objc func didTap(_ notification:Notification) {
+		if self.player.timeControlStatus == .playing
+		{
+			self.player.pause()
+		}
+		else
+		{
+			self.player.play()
+		}
+	}
+
+	@objc func didDoubleTap(_ notification:Notification) {
+		self.player.seek(to: CMTime.zero)
+	}
+
 }
 
+extension Notification.Name {
+	static let didTap = Notification.Name("didTap")
+	static let didDoubleTap = Notification.Name("didDoubleTap")
+}

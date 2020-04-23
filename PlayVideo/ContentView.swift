@@ -13,12 +13,12 @@ struct ContentView: View {
 
 	var body: some View {
 		VideoView(url: url)
-			.onTapGesture {
-				print("Tapped!")
-			}
 			.onTapGesture(count: 2) {
-				print("Double tapped!")
-		}
+				NotificationCenter.default.post(name: .didDoubleTap, object: nil)
+			}
+			.onTapGesture {
+				NotificationCenter.default.post(name: .didTap, object: nil)
+			}
 	}
 }
 
