@@ -1,6 +1,6 @@
 //
 //  VideoView.swift
-//  VideoCard
+//  VideoPlayer
 //
 //  Created by Dirk Bester on 4/21/20.
 //  Copyright © 2020 Dirk Bester. All rights reserved.
